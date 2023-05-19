@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.centro{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.accordion{
+    background-color: white;
+    width: 80%;
+    padding: 1.5rem;
+    margin: 60px auto;
+    max-width: 500px;
+    box-shadow: 0 0 10px -3px rgba(0, 0, 0, 5);
+    border-radius: 6px;
+    border-left: 2px solid #853bf4;
+}
+input{
+    display: none;
+}
+
+.accordion_link{
+    display: aling-block;
+    color: 853bf4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.accordion_item{
+    display: grid;
+    grid-template-rows: var(--rows, 0fr);
+    transition: .3s grid-template-rows;
+}
+p{
+    overflow: hidden;
+}
+.accordion:has(:checked){
+    --rows: 1fr;
+}
