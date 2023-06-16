@@ -1,0 +1,12 @@
+CREATE DATABASE factura;
+USE factura;
+CREATE TABLE facturas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    tarjeta VARCHAR(16) NOT NULL,
+    criptomoneda VARCHAR(10) NOT NULL,
+    cantidad INT NOT NULL,
+    precio DECIMAL(10, 2) NOT NULL,
+    total DECIMAL(10, 2) NOT NULL,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
