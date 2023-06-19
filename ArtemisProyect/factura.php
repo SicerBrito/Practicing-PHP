@@ -12,27 +12,6 @@
 </head>
 
 <body>
-    
-    <?php
-    include "./conexion/conexion.php";
-    
-    $nombre = $_POST['nombre'] ?? '';
-    $tarjeta = $_POST['tarjeta'] ?? '';
-    $selectedCriptomoneda = $_POST['opt'] ?? '';
-    $cantidad = $_POST['cantidad'] ?? '';
-
-    $criptomonedas = array(
-        'BTC' => 1000,
-        'ETH' => 2000,
-        'BNB' => 3000,
-        'XRP' => 4000,
-        'ADA' => 5000,
-        'DOGE' => 6000
-    );
-
-    $precio = isset($criptomonedas[$selectedCriptomoneda]) ? $criptomonedas[$selectedCriptomoneda] : 0;
-    $total = $precio * $cantidad;
-    ?>
 
     <form action="factura.php" method="post">
 
@@ -72,6 +51,27 @@
         <input type="submit" value="Comprar">
 
     </form>
+
+    <?php
+    include "./conexion/conexion.php";
+    
+    $nombre = $_POST['nombre'] ?? '';
+    $tarjeta = $_POST['tarjeta'] ?? '';
+    $selectedCriptomoneda = $_POST['opt'] ?? '';
+    $cantidad = $_POST['cantidad'] ?? '';
+
+    $criptomonedas = array(
+        'BTC' => 1000,
+        'ETH' => 2000,
+        'BNB' => 3000,
+        'XRP' => 4000,
+        'ADA' => 5000,
+        'DOGE' => 6000
+    );
+
+    $precio = isset($criptomonedas[$selectedCriptomoneda]) ? $criptomonedas[$selectedCriptomoneda] : 0;
+    $total = $precio * $cantidad;
+    ?>
 
     <?php if ($selectedCriptomoneda && $cantidad && $nombre && $tarjeta) : ?>
         <div class="factura">
