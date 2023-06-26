@@ -100,6 +100,7 @@ echo $televisor -> getCalidad() . "<br>";
 
 echo "<br><br>";
 
+
 $sancocho = new Producto();
 $sancocho -> setNombreProducto("Sancocho delicioso");
 $sancocho -> setPrecio(15 . " USD");
@@ -116,5 +117,26 @@ echo $sancocho -> getTamaño() . "<br>";
 echo $sancocho -> getColor() . "<br>";
 echo $sancocho -> getGarantia() . "<br>";
 echo $sancocho -> getCalidad() . "<br>";
+
+
+echo "<br><br>";
+
+
+$busoCampus = new Producto();
+$busoCampus -> setNombreProducto("buso de campus");
+$busoCampus -> setPrecio(85 . " USD");
+$busoCampus -> setCategorias("Ropa");
+$busoCampus -> setTamaño("Mediano");
+$busoCampus -> setColor("Gris");
+$busoCampus -> setGarantia("No tiene");
+$busoCampus -> setCalidad("Alta");
+
+echo $busoCampus -> getNombreProducto() . "<br>";
+echo $busoCampus -> getPrecio() . "<br>";
+echo $busoCampus -> getCategorias() . "<br>";
+echo $busoCampus -> getTamaño() . "<br>";
+echo $busoCampus -> getColor() . "<br>";
+echo $busoCampus -> getGarantia() . "<br>";
+echo $busoCampus -> getCalidad() . "<br>";
 
 ?>
